@@ -1,0 +1,39 @@
+#Criação do banco e permição para usuario;
+CREATE DATABASE dB_tsdigitrack;
+GRANT ALL ON DATABASE db_tsdigitrack TO digiadmin;
+
+#Criação de tabela; 
+
+CREATE TABLE tb_person (
+    id BIGINT PRIMARY KEY,
+    full_name VARCHAR(60) not null,
+    cpf VARCHAR(11) not null,
+    email VARCHAR(50) not null,
+    birthday DATE not null,
+   	gender INT not null,
+   	description TEXT not null,
+   	creation_regist DATE,
+   	updata_register DATE
+);
+
+#Inserção de dados para teste;
+
+insert into tb_person(id,full_name,cpf,email,birthday,gender, description, creation_regist,	updata_register)
+VALUES(01,'Anderson Monteiro Costa','09988766550','Anderson@tsi.com','1990-03-10', 0,
+'Lorem ipsum accumsan primis aenean vivamus semper blandit aenean tincidunt inceptos, ad faucibus convallis cursus mattis torquent quisque praesent etiam mauris integer, suspendisse eget morbi turpis fringilla ad hendrerit ornare senectus.',
+'2020-03-19','2020-03-19');
+
+insert into tb_person(id,full_name,cpf,email,birthday,gender, description, creation_regist,	updata_register)
+VALUES(02,'Andreia Sotero Verdan','10999000550','asv@tsi.com','1991-03-10', 1,
+'Lorem ipsum accumsan primis aenean vivamus semper blandit aenean tincidunt inceptos, ad faucibus convallis cursus mattis torquent quisque praesent etiam mauris integer, suspendisse eget morbi turpis fringilla ad hendrerit ornare senectus.',
+'2020-05-19','2020-05-19');
+
+insert into tb_person(id,full_name,cpf,email,birthday,gender, description, creation_regist,	updata_register)
+VALUES(03,'Vilson Santos de Sá','01314141550','dsa@tsi.com','1989-12-10', 0,
+'Lorem ipsum accumsan primis aenean vivamus semper blandit aenean tincidunt inceptos, ad faucibus convallis cursus mattis torquent quisque praesent etiam mauris integer, suspendisse eget morbi turpis fringilla ad hendrerit ornare senectus.',
+'2020-06-19','2020-06-19');
+
+insert into tb_person(id,full_name,cpf,email,birthday,gender, description, creation_regist,	updata_register)
+VALUES(04,'Cicero Costa Veras','09333333501','costa.veras@tsi.com','1996-03-10', 0,
+'Lorem ipsum accumsan primis aenean vivamus semper blandit aenean tincidunt inceptos, ad faucibus convallis cursus mattis torquent quisque praesent etiam mauris integer, suspendisse eget morbi turpis fringilla ad hendrerit ornare senectus.',
+'2020-08-19','2020-08-19');
