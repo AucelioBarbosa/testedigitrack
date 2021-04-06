@@ -29,12 +29,12 @@ public class Person implements Serializable {
 	private Long id;
 
 	@Column(name = "full_name", length = 60, nullable = false)
-	private String fullname;
+	private String fullName;
 
 	@Column(name = "cpf", nullable = false)
 	private String cpf;
 
-	@JsonFormat(pattern = "dd/MM/yyyy HH:mm")
+	@JsonFormat(pattern = "dd/MM/yyyy")
 	@Column(name = "birthday", nullable = false)
 	private Date birthday;
 
@@ -66,11 +66,11 @@ public class Person implements Serializable {
 	}
 
 	public String getFullname() {
-		return fullname;
+		return fullName;
 	}
 
 	public void setFullname(String fullname) {
-		this.fullname = fullname;
+		this.fullName = fullname;
 	}
 
 	public String getCpf() {
