@@ -29,11 +29,13 @@ public class PesonResources {
 	public List<Person> allListPerson() {
 		return personService.listPerson();
 	}
+	
 
 	@PostMapping("/person")
 	public Person insertPerson(@RequestBody Person person) {
 		return personService.savetPerson(person);
 	}
+	
 
 	@DeleteMapping("/person/{id}")
 	public void delitePerson(@PathVariable(value = "id" )Long id) {
