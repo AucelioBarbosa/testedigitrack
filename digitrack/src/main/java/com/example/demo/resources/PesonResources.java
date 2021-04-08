@@ -33,7 +33,7 @@ public class PesonResources {
 
 	@PostMapping("/person")
 	public Person insertPerson(@RequestBody Person person) {
-		return personService.savetPerson(person);
+		return personService.savePerson(person);
 	}
 	
 
@@ -42,8 +42,8 @@ public class PesonResources {
 		personService.excludePerson(id);
 	}
 
-	@PutMapping("/person")
-	public Person modifyPerson(@RequestBody Person person) {
+	@PutMapping("/person/{id}")
+	public Person modifyPerson(@PathVariable(value ="id")@RequestBody Person person) {
 		return personService.updatePerson(person);
 	}
 	

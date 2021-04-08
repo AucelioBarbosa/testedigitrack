@@ -20,7 +20,7 @@ public class PersonService{
 		return personRepository.findAll();
 	}
 
-	public Person savetPerson(Person person) {
+	public Person savePerson(Person person) {
 		return personRepository.save(person);
 	}
 

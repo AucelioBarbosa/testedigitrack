@@ -56,7 +56,11 @@ public class Person implements Serializable {
 	@UpdateTimestamp
 	@Column(name = "UPDATEDATE")
 	private LocalDateTime updated;
-
+	
+	public Person() {
+		
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -65,12 +69,12 @@ public class Person implements Serializable {
 		this.id = id;
 	}
 
-	public String getFullname() {
+	public String getFullName() {
 		return fullName;
 	}
 
-	public void setFullname(String fullname) {
-		this.fullName = fullname;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getCpf() {
@@ -128,5 +132,5 @@ public class Person implements Serializable {
 	public void setUpdated(LocalDateTime updated) {
 		this.updated = updated;
 	}
-
+	
 }
